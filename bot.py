@@ -11,7 +11,7 @@ hash = "d7c97d558577a8633485c557a41174ef"
 
 client = TelegramClient("main_session"  , api_id=id , api_hash=hash)
 chats = [1001781580295, 1001646432242]
-mdisk_api = 'vXCZhoG9PKMe0Agyrjfz'
+mdisk_api = 'jNgyWyCG2KK4tvh5RVFX'
 send_to = -1001527597206
 
 footer = "\n━━━━━━━━━━━━━━━\n⚙️ How to Download / Watch Online\n━━━━━━━━━━━━━━━\n⭐️JOIN CHANNEL ➡️ t.me/"
