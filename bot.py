@@ -55,7 +55,7 @@ async def hello(event):
             # print("changed link : " , shareLink)
             caption = re.sub(link , shareLink , caption)
             # print(caption)
-            sleep(2)
+            sleep(0.2)
         caption = caption + "\n" + footer
         if media:
             await client.send_file(send_to ,file=media , caption=caption)
