@@ -58,10 +58,10 @@ async def hello(event):
             sleep(2)
         caption = caption + "\n" + footer
         if media:
-            await client.send_file("@youtube_downloader01" ,file=media , caption=caption)
+            await client.send_file(send_to ,file=media , caption=caption)
             os.remove(media)
         else:
-            await client.send_message("@youtube_downloader01" , caption)
+            await client.send_message(send_to , caption)
 
     
     
