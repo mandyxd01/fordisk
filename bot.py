@@ -11,7 +11,7 @@ hash = "d7c97d558577a8633485c557a41174ef"
 print("Starting Deployment..!")
 
 client = TelegramClient("main_session"  , api_id=id , api_hash=hash)
-indchats = [-1001599913233,-1001234716701,-1001493682832,-1001781580295]
+indchats = [-1001599913233,-1001234716701,-1001493682832,-1001562499878,-1001168213397,-1001160036259]
 mdisk_api = 'jNgyWyCG2KK4tvh5RVFX'
 indsend_to = -1001494780519
 
