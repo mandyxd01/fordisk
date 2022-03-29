@@ -8,15 +8,16 @@ import os
 id= 14295855
 hash = "d7c97d558577a8633485c557a41174ef"
 
+print("Starting Deployment..!")
 
 client = TelegramClient("main_session"  , api_id=id , api_hash=hash)
-chats = [1001781580295, 1001646432242]
+indchats = [-1001599913233,-1001234716701,-1001493682832,-1001781580295]
 mdisk_api = 'jNgyWyCG2KK4tvh5RVFX'
-send_to = -1001527597206
+indsend_to = -1001494780519
 
-footer = "\n━━━━━━━━━━━━━━━\n⚙️ How to Download / Watch Online\n━━━━━━━━━━━━━━━\n⭐️JOIN CHANNEL ➡️ t.me/"
+footer = "\n━━━━━━━━━━━━━━━\n⚙️ How to Download / Watch Online\n━━━━━━━━━━━━━━━\n⭐️JOIN CHANNEL ➡️ t.me/X3Links"
 
-@client.on(events.NewMessage(chats=chats))
+@client.on(events.NewMessage(chats=indchats))
 async def hello(event):
     # chat = await event.get_chat()
     caption = event.message.message
@@ -58,14 +59,20 @@ async def hello(event):
             sleep(0.2)
         caption = caption + "\n" + footer
         if media:
-            await client.send_file(send_to ,file=media , caption=caption)
+            await client.send_file(indsend_to ,file=media , caption=caption)
             os.remove(media)
         else:
-            await client.send_message(send_to , caption)
+            await client.send_message(indsend_to , caption)
 
     
     
-print("Done F")
+print("Bot has been deployed.!")
 
 client.start()
 client.run_until_disconnected()
+
+
+
+
+
+
