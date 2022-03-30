@@ -29,7 +29,7 @@ webchat = [-1001634910114,-1001038963647,-1001350448575,-1001585256875,-10013989
 websend_to = -1001671942243
 
 #desi vars
-deschat = [-1001387860550,-1001250363281,-1001314689320,-1001138671226,-1001461291601]
+deschat = [-1001314689320,-1001387860550,-1001250363281,-1001314689320,-1001138671226,-1001461291601]
 dessend_to = -1001494780519
 
 #tango vars
@@ -109,9 +109,9 @@ async def hello(event):
         caption = re.sub("hehe" , "" , caption)
         caption = re.sub("hoho" , "" , caption)
 
-        caption = re.sub("@.*" , "" , caption)
-        caption = re.sub("https://t.me/.*" , "" , caption)
-        caption = re.sub("t.me/.*" , "" , caption)
+        caption = re.sub("@.*" , "@X3Links" , caption)
+        caption = re.sub("https://t.me/.*" , "@X3Links" , caption)
+        caption = re.sub("t.me/.*" , "@X3Links" , caption)
 
         regrex_pattern = re.compile(pattern = "["
                     u"\U0001F600-\U0001F64F"  # emoticons
@@ -157,11 +157,11 @@ async def hello(event):
             print("no media")
         #  this is for blacklist word 
         caption = re.sub("hehe" , "" , caption)
-        caption = re.sub("hoho" , "" , caption)
+        caption = re.sub("@ EZINETWORK" , "" , caption)
 
-        caption = re.sub("@.*" , "" , caption)
-        caption = re.sub("https://t.me/.*" , "" , caption)
-        caption = re.sub("t.me/.*" , "" , caption)
+        caption = re.sub("@.*" , "@X3Links" , caption)
+        caption = re.sub("https://t.me/.*" , "@X3Links" , caption)
+        caption = re.sub("t.me/.*" , "@X3Links" , caption)
 
         regrex_pattern = re.compile(pattern = "["
                     u"\U0001F600-\U0001F64F"  # emoticons
@@ -210,9 +210,9 @@ async def hello(event):
         caption = re.sub("hehe" , "" , caption)
         caption = re.sub("hoho" , "" , caption)
 
-        caption = re.sub("@.*" , "" , caption)
-        caption = re.sub("https://t.me/.*" , "" , caption)
-        caption = re.sub("t.me/.*" , "" , caption)
+        caption = re.sub("@.*" , "@X3Links" , caption)
+        caption = re.sub("https://t.me/.*" , "@X3Links" , caption)
+        caption = re.sub("t.me/.*" , "@X3Links" , caption)
 
         regrex_pattern = re.compile(pattern = "["
                     u"\U0001F600-\U0001F64F"  # emoticons
@@ -259,9 +259,9 @@ async def hello(event):
         caption = re.sub("hehe" , "" , caption)
         caption = re.sub("hoho" , "" , caption)
 
-        caption = re.sub("@.*" , "" , caption)
-        caption = re.sub("https://t.me/.*" , "" , caption)
-        caption = re.sub("t.me/.*" , "" , caption)
+        caption = re.sub("@.*" , "@X3Links" , caption)
+        caption = re.sub("https://t.me/.*" , "@X3Links" , caption)
+        caption = re.sub("t.me/.*" , "@X3Links" , caption)
 
         regrex_pattern = re.compile(pattern = "["
                     u"\U0001F600-\U0001F64F"  # emoticons
