@@ -18,7 +18,7 @@ mdisk_api = 'jNgyWyCG2KK4tvh5RVFX'
 #footer
 footer = '''\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
 ⭐️JOIN OUR BACKUP CHANNEL
-➡️https://t.me/+ZyBWJYQoKEw1M2Fl'''
+➡️https://t.me/+4pWKks9myX03Y2Ex'''
 
 #indian variables
 indchats = [-1001794604239,-1001665192861,-1001626636022,-1001168213397,-1001708628164,-1001562499878,-1001493682832]
