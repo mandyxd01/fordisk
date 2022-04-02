@@ -63,6 +63,7 @@ async def hello(event):
         caption = re.sub("@.*" , "@X3Links" , caption)
         caption = re.sub("https://t.me/.*" , "@X3Links" , caption)
         caption = re.sub("t.me/.*" , "@X3Links" , caption)
+        caption = re.sub("T.me/.*" , "@X3Links" , caption)
 
         regrex_pattern = re.compile(pattern = "["
                     u"\U0001F600-\U0001F64F"  # emoticons
