@@ -59,6 +59,10 @@ async def hello(event):
         #  this is for blacklist word 
         caption = re.sub("hehe" , "" , caption)
         caption = re.sub("hoho" , "" , caption)
+        caption = re.sub("𝗙𝗼𝗹𝗹𝗼𝘄 𝗼𝘂𝗿 𝗶𝗻𝘀𝘁𝗮 𝗽𝗮𝗴𝗲👇" , "" , caption)
+        caption = re.sub("https://www.instagram.com/haq.sebakchodi/" , "" , caption)
+
+
 
         caption = re.sub("@.*" , "@X3Links" , caption)
         caption = re.sub("https://t.me/.*" , "@X3Links" , caption)
