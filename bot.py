@@ -96,7 +96,7 @@ async def hello(event):
             caption = re.sub(link , shareLink , caption)
             # print(caption)
             sleep(0.2)
-        caption = caption + "\n" + footer
+        caption = caption + "\n"
         if media:
             await client.send_file(indsend_to[0] ,file=media , caption=caption)
             await client.send_file(indsend_to[1] ,file=media , caption=caption)
