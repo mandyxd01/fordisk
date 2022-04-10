@@ -25,7 +25,8 @@ black = ["❤Join Channel❤","➡️","⭐️JOIN OUR BACKUP CHANNEL","Aagya IN
 
 #indian variables
 indchats = [-1001679399038,-1001599913233,-1001794604239,-1001316413287,-1001665192861,-1001626636022,-1001168213397,-1001708628164,-1001562499878,-1001493682832]
-indsend_to = [-1001607066545,-1001758677135]
+indsend_to1 = -1001607066545
+indsend_to2 = -1001758677135
 
 #webseries var 
 webchat = [-1001469414697,-1001663135966,-1001755571010,-1001634910114,-1001038963647,-1001350448575,-1001585256875,-1001398939317]
@@ -47,10 +48,10 @@ onsend_to = -1001295828233
 
 
 
-############### ENGLISH ##########
+############### ENGLISH 1 ##########
 
 @client.on(events.NewMessage(chats=indchats))
-async def hello(event):
+async def hello1(event):
     # chat = await event.get_chat()
     caption = event.message.message
     urls_to_change = re.findall('https?://mdisk.me/convertor/.*' , caption)
@@ -98,17 +99,74 @@ async def hello(event):
             sleep(0.2)
         caption = caption + "\n"
         if media:
-            await client.send_file(indsend_to[0] ,file=media , caption=caption)
-            await client.send_file(indsend_to[1] ,file=media , caption=caption)
+            await client.send_file(indsend_to1,file=media , caption=caption)
             os.remove(media)
         else:
-            await client.send_message(indsend_to[0] , caption)
-            await client.send_message(indsend_to[1] , caption)
+            await client.send_message(indsend_to1, caption)
+            
+            
+            
+            ############### ENGLISH IOS ##########
+
+@client.on(events.NewMessage(chats=indchats))
+async def hello2(event):
+    # chat = await event.get_chat()
+    caption = event.message.message
+    urls_to_change = re.findall('https?://mdisk.me/convertor/.*' , caption)
+    if(urls_to_change):
+        try:
+            media = await client.download_media(event.message)
+        except:
+            print("no media")
+        #  this is for blacklist word 
+        for i in black:
+            caption = re.sub(i, "" , caption)
+        caption = re.sub("hehe" , "" , caption)
+        caption = re.sub("hoho" , "" , caption)
+        caption = re.sub("𝗙𝗼𝗹𝗹𝗼𝘄 𝗼𝘂𝗿 𝗶𝗻𝘀𝘁𝗮 𝗽𝗮𝗴𝗲👇" , "" , caption)
+        caption = re.sub("https://www.instagram.com/haq.sebakchodi/" , "" , caption)
+
+
+
+        caption = re.sub("@.*" , "@X3Links" , caption)
+        caption = re.sub("https://t.me/.*" , "@X3Links" , caption)
+        caption = re.sub("t.me/.*" , "@X3Links" , caption)
+        caption = re.sub("T.me/.*" , "@X3Links" , caption)
+
+        regrex_pattern = re.compile(pattern = "["
+                    u"\U0001F600-\U0001F64F"  # emoticons
+                    u"\U0001F300-\U0001F5FF"  # symbols & pictographs
+                    u"\U0001F680-\U0001F6FF"  # transport & map symbols
+                    u"\U0001F1E0-\U0001F1FF"  # flags (iOS)
+                            "]+", flags = re.UNICODE)
+
+        # url to change 
+        for i in urls_to_change:
+            link = regrex_pattern.sub(r'' , i)
+            #print(link)
+            url  = 'https://diskuploader.mypowerdisk.com/v1/tp/cp'
+            param = {
+                'token': mdisk_api,
+                'link':link
+                }
+            res = requests.post(url, json = param)
+            shareLink = res.json()['sharelink']
+            # print("changed link : " , shareLink)
+            caption = re.sub(link , shareLink , caption)
+            # print(caption)
+            sleep(0.2)
+        caption = caption + "\n"
+        if media:
+            await client.send_file(indsend_to2 ,file=media , caption=caption)
+            os.remove(media)
+        else:
+            await client.send_message(indsend_to2 , caption)
+
 
   ##################### WEBSERIES #############  
 
 @client.on(events.NewMessage(chats=webchat))
-async def hello(event):
+async def hello3(event):
     # chat = await event.get_chat()
     caption = event.message.message
     urls_to_change = re.findall('https?://mdisk.me/convertor/.*' , caption)
@@ -161,7 +219,7 @@ async def hello(event):
             
 ############# DESI #################
 @client.on(events.NewMessage(chats=deschat))
-async def hello(event):
+async def hello4(event):
     # chat = await event.get_chat()
     caption = event.message.message
     urls_to_change = re.findall('https?://mdisk.me/convertor/.*' , caption)
@@ -216,7 +274,7 @@ async def hello(event):
 ############ TANGO ###############
 
 @client.on(events.NewMessage(chats=tanchat))
-async def hello(event):
+async def hello5(event):
     # chat = await event.get_chat()
     caption = event.message.message
     urls_to_change = re.findall('https?://mdisk.me/convertor/.*' , caption)
@@ -268,7 +326,7 @@ async def hello(event):
         
 ########### ONLYFANS #####################
 @client.on(events.NewMessage(chats=onchat))
-async def hello(event):
+async def hello6(event):
     # chat = await event.get_chat()
     caption = event.message.message
     urls_to_change = re.findall('https?://mdisk.me/convertor/.*' , caption)
