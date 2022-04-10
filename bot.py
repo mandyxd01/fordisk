@@ -128,7 +128,7 @@ async def hello2(event):
 
 
 
-        caption = re.sub("@.*" , "@X3Links" , caption)
+        caption = re.sub("@.*" , "" , caption)
         caption = re.sub("https://t.me/.*" , "" , caption)
         caption = re.sub("t.me/.*" , "" , caption)
         caption = re.sub("T.me/.*" , "" , caption)
