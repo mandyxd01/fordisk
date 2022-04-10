@@ -20,9 +20,12 @@ footer = '''\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
 ⭐️JOIN OUR BACKUP CHANNEL
 ➡️https://t.me/+4pWKks9myX03Y2Ex'''
 
+black = ["❤Join Channel❤","➡️","⭐️JOIN OUR BACKUP CHANNEL","Aagya INDIA'S 1st FREE WINNING Fantasy APP","Visit :- www.winner11.net","Install now 👇","https://mdisk.me/convertor/203x360/jn2SYC","@ EZINETWORK","Must watch 🤩🤩🔥🔥🔥🔥","Join Our Telegram Backup Channel In Case This Channel Delete Please Join It Please👇👇","Must watch Guys 🔥🔥🔥🔥🔥","Enjoy it ❤❤❤","♨️ 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳 𝙺𝙰𝚁𝙽𝙴 𝙽𝙰𝙷𝙸 𝙰𝙰𝚁𝙰 𝚃𝙾𝙷 𝙿𝙸𝙽𝙽𝙴𝙳 𝙼𝙴𝚂𝚂𝙰𝙶𝙴 𝙲𝙷𝙴𝙲𝙺 𝙺𝙰𝚁𝙾","👉 🅱🅰🅲🅺🆄🅿  🅲🅷🅰🅽🅽🅴🅻","▬" ,"➖" ,"=" ,"●╾⁃⁃╼╾⁃⁃╼╾⁃⁃╼╾⁃⁃╼╾⁃⁃╼╾⁃⁃╼╾⁃⁃╼●" ,"🔥Backup file🔥" ,"🔥Join channel 🔥" ,"JOIN CHANNEL 👇" ,"Join adult network🍌💦" ,"SHARE OUR CHANNEL👇" ,"𝗧𝗲𝗹𝗲𝗴𝗿𝗮𝗺 𝗰𝗵𝗮𝗻𝗻𝗲𝗹" ,"𝐉𝐎𝐈𝐍 𝐔𝐒 ➪" ,"🙆‍♀ Join Our Backup:- ","Join now best channel" ,"♨️ SEARCH & JOIN NOW👇","☆☆☆••••••••••••••••☆☆☆","➥" ,]
+
+
 #indian variables
 indchats = [-1001679399038,-1001599913233,-1001794604239,-1001316413287,-1001665192861,-1001626636022,-1001168213397,-1001708628164,-1001562499878,-1001493682832]
-indsend_to = -1001607066545
+indsend_to = [-1001607066545,-1001758677135]
 
 #webseries var 
 webchat = [-1001469414697,-1001663135966,-1001755571010,-1001634910114,-1001038963647,-1001350448575,-1001585256875,-1001398939317]
@@ -57,6 +60,8 @@ async def hello(event):
         except:
             print("no media")
         #  this is for blacklist word 
+        for i in black:
+            caption = re.sub(i, "" , caption)
         caption = re.sub("hehe" , "" , caption)
         caption = re.sub("hoho" , "" , caption)
         caption = re.sub("𝗙𝗼𝗹𝗹𝗼𝘄 𝗼𝘂𝗿 𝗶𝗻𝘀𝘁𝗮 𝗽𝗮𝗴𝗲👇" , "" , caption)
@@ -93,10 +98,12 @@ async def hello(event):
             sleep(0.2)
         caption = caption + "\n" + footer
         if media:
-            await client.send_file(indsend_to ,file=media , caption=caption)
+            await client.send_file(indsend_to[0] ,file=media , caption=caption)
+            await client.send_file(indsend_to[1] ,file=media , caption=caption)
             os.remove(media)
         else:
-            await client.send_message(indsend_to , caption)
+            await client.send_message(indsend_to[0] , caption)
+            await client.send_message(indsend_to[1] , caption)
 
   ##################### WEBSERIES #############  
 
@@ -113,6 +120,8 @@ async def hello(event):
         #  this is for blacklist word 
         caption = re.sub("hehe" , "" , caption)
         caption = re.sub("hoho" , "" , caption)
+        for i in black:
+            caption = re.sub(i, "" , caption)
 
         caption = re.sub("@.*" , "@X3Links" , caption)
         caption = re.sub("https://t.me/.*" , "@X3Links" , caption)
@@ -161,9 +170,12 @@ async def hello(event):
             media = await client.download_media(event.message)
         except:
             print("no media")
+            
         #  this is for blacklist word 
         caption = re.sub("hehe" , "" , caption)
         caption = re.sub("@ EZINETWORK" , "" , caption)
+        for i in black:
+            caption = re.sub(i, "" , caption)
 
         caption = re.sub("@.*" , "@X3Links" , caption)
         caption = re.sub("https://t.me/.*" , "@X3Links" , caption)
@@ -216,6 +228,8 @@ async def hello(event):
         #  this is for blacklist word 
         caption = re.sub("hehe" , "" , caption)
         caption = re.sub("hoho" , "" , caption)
+        for i in black:
+            caption = re.sub(i, "" , caption)
 
         caption = re.sub("@.*" , "@X3Links" , caption)
         caption = re.sub("https://t.me/.*" , "@X3Links" , caption)
@@ -266,6 +280,8 @@ async def hello(event):
         #  this is for blacklist word 
         caption = re.sub("hehe" , "" , caption)
         caption = re.sub("hoho" , "" , caption)
+        for i in black:
+            caption = re.sub(i, "" , caption)
 
         caption = re.sub("@.*" , "@X3Links" , caption)
         caption = re.sub("https://t.me/.*" , "@X3Links" , caption)
