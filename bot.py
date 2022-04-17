@@ -61,8 +61,7 @@ async def hello1(event):
         except:
             print("no media")
         #  this is for blacklist word 
-        for i in black:
-            caption = re.sub(i, "" , caption)
+        
         caption = re.sub("hehe" , "" , caption)
         caption = re.sub("hoho" , "" , caption)
         caption = re.sub("𝗙𝗼𝗹𝗹𝗼𝘄 𝗼𝘂𝗿 𝗶𝗻𝘀𝘁𝗮 𝗽𝗮𝗴𝗲👇" , "" , caption)
@@ -74,6 +73,8 @@ async def hello1(event):
         caption = re.sub("https://t.me/.*" , "@X3Links" , caption)
         caption = re.sub("t.me/.*" , "@X3Links" , caption)
         caption = re.sub("T.me/.*" , "@X3Links" , caption)
+        for i in black:
+            caption = re.sub(i, "" , caption)
 
         regrex_pattern = re.compile(pattern = "["
                     u"\U0001F600-\U0001F64F"  # emoticons
@@ -119,8 +120,7 @@ async def hello2(event):
         except:
             print("no media")
         #  this is for blacklist word 
-        for i in black:
-            caption = re.sub(i, "" , caption)
+        
         caption = re.sub("hehe" , "" , caption)
         caption = re.sub("hoho" , "" , caption)
         caption = re.sub("𝗙𝗼𝗹𝗹𝗼𝘄 𝗼𝘂𝗿 𝗶𝗻𝘀𝘁𝗮 𝗽𝗮𝗴𝗲👇" , "" , caption)
@@ -132,6 +132,8 @@ async def hello2(event):
         caption = re.sub("https://t.me/.*" , "" , caption)
         caption = re.sub("t.me/.*" , "" , caption)
         caption = re.sub("T.me/.*" , "" , caption)
+        for i in black:
+            caption = re.sub(i, "" , caption)
 
         regrex_pattern = re.compile(pattern = "["
                     u"\U0001F600-\U0001F64F"  # emoticons
@@ -178,13 +180,14 @@ async def hello3(event):
         #  this is for blacklist word 
         caption = re.sub("hehe" , "" , caption)
         caption = re.sub("hoho" , "" , caption)
-        for i in black:
-            caption = re.sub(i, "" , caption)
+        
 
         caption = re.sub("@.*" , "@X3Links" , caption)
         caption = re.sub("https://t.me/.*" , "@X3Links" , caption)
         caption = re.sub("t.me/.*" , "@X3Links" , caption)
         caption = re.sub("T.me/.*" , "@X3Links" , caption)
+        for i in black:
+            caption = re.sub(i, "" , caption)
 
         regrex_pattern = re.compile(pattern = "["
                     u"\U0001F600-\U0001F64F"  # emoticons
@@ -232,13 +235,14 @@ async def hello4(event):
         #  this is for blacklist word 
         caption = re.sub("hehe" , "" , caption)
         caption = re.sub("@ EZINETWORK" , "" , caption)
-        for i in black:
-            caption = re.sub(i, "" , caption)
+        
 
         caption = re.sub("@.*" , "@X3Links" , caption)
         caption = re.sub("https://t.me/.*" , "@X3Links" , caption)
         caption = re.sub("t.me/.*" , "@X3Links" , caption)
         caption = re.sub("T.me/.*" , "@X3Links" , caption)
+        for i in black:
+            caption = re.sub(i, "" , caption)
 
         regrex_pattern = re.compile(pattern = "["
                     u"\U0001F600-\U0001F64F"  # emoticons
@@ -286,13 +290,14 @@ async def hello5(event):
         #  this is for blacklist word 
         caption = re.sub("hehe" , "" , caption)
         caption = re.sub("hoho" , "" , caption)
-        for i in black:
-            caption = re.sub(i, "" , caption)
+        
 
         caption = re.sub("@.*" , "@X3Links" , caption)
         caption = re.sub("https://t.me/.*" , "@X3Links" , caption)
         caption = re.sub("t.me/.*" , "@X3Links" , caption)
         caption = re.sub("T.me/.*" , "@X3Links" , caption)
+        for i in black:
+            caption = re.sub(i, "" , caption)
 
         regrex_pattern = re.compile(pattern = "["
                     u"\U0001F600-\U0001F64F"  # emoticons
@@ -338,13 +343,14 @@ async def hello6(event):
         #  this is for blacklist word 
         caption = re.sub("hehe" , "" , caption)
         caption = re.sub("hoho" , "" , caption)
-        for i in black:
-            caption = re.sub(i, "" , caption)
+        
 
         caption = re.sub("@.*" , "@X3Links" , caption)
         caption = re.sub("https://t.me/.*" , "@X3Links" , caption)
         caption = re.sub("t.me/.*" , "@X3Links" , caption)
         caption = re.sub("T.me/.*" , "@X3Links" , caption)
+        for i in black:
+            caption = re.sub(i, "" , caption)
 
         regrex_pattern = re.compile(pattern = "["
                     u"\U0001F600-\U0001F64F"  # emoticons
