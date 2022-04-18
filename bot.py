@@ -211,7 +211,7 @@ async def hello3(event):
             caption = re.sub(link , shareLink , caption)
             # print(caption)
             sleep(0.2)
-        caption = caption + "\n" + footer
+        caption = caption 
         if media:
             await client.send_file(websend_to ,file=media , caption=caption)
             os.remove(media)
