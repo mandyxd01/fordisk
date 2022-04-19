@@ -10,7 +10,7 @@ hash = "d7c97d558577a8633485c557a41174ef"
 
 print("Starting Deployment..!")
 
-client = TelegramClient("main_session"  , api_id=id , api_hash=hash)
+client = TelegramClient("main_session55"  , api_id=id , api_hash=hash)
 
 #mdiskapi
 mdisk_api = 'jNgyWyCG2KK4tvh5RVFX'
@@ -389,7 +389,6 @@ print("Bot has been deployed.!")
 
 client.start()
 client.run_until_disconnected()
-
 
 
 
