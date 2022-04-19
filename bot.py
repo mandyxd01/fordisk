@@ -59,6 +59,7 @@ async def hello1(event):
         try:
             media = await client.download_media(event.message)
         except:
+            media = False
             print("no media")
         #  this is for blacklist word 
         
@@ -118,6 +119,7 @@ async def hello2(event):
         try:
             media = await client.download_media(event.message)
         except:
+            media = False
             print("no media")
         #  this is for blacklist word 
         
@@ -176,6 +178,7 @@ async def hello3(event):
         try:
             media = await client.download_media(event.message)
         except:
+            media = False
             print("no media")
         #  this is for blacklist word 
         caption = re.sub("hehe" , "" , caption)
@@ -230,6 +233,7 @@ async def hello4(event):
         try:
             media = await client.download_media(event.message)
         except:
+            media = False
             print("no media")
             
         #  this is for blacklist word 
@@ -286,6 +290,7 @@ async def hello5(event):
         try:
             media = await client.download_media(event.message)
         except:
+            media = False
             print("no media")
         #  this is for blacklist word 
         caption = re.sub("hehe" , "" , caption)
@@ -339,6 +344,7 @@ async def hello6(event):
         try:
             media = await client.download_media(event.message)
         except:
+            media = False
             print("no media")
         #  this is for blacklist word 
         caption = re.sub("hehe" , "" , caption)
