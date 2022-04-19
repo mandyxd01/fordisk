@@ -92,7 +92,7 @@ async def hello1(event):
             url  = 'https://diskuploader.mypowerdisk.com/v1/tp/cp'
             param = {
                 'token': mdisk_api,
-                'link':link
+                'link':link.strip()
                 }
             res = requests.post(url, json = param)
             shareLink = res.json()['sharelink']
@@ -152,7 +152,7 @@ async def hello2(event):
             url  = 'https://diskuploader.mypowerdisk.com/v1/tp/cp'
             param = {
                 'token': mdisk_api,
-                'link':link
+                'link':link.strip()
                 }
             res = requests.post(url, json = param)
             shareLink = res.json()['sharelink']
@@ -207,7 +207,7 @@ async def hello3(event):
             url  = 'https://diskuploader.mypowerdisk.com/v1/tp/cp'
             param = {
                 'token': mdisk_api,
-                'link':link
+                'link':link.strip()
                 }
             res = requests.post(url, json = param)
             shareLink = res.json()['sharelink']
@@ -263,7 +263,7 @@ async def hello4(event):
             url  = 'https://diskuploader.mypowerdisk.com/v1/tp/cp'
             param = {
                 'token': mdisk_api,
-                'link':link
+                'link':link.strip()
                 }
             res = requests.post(url, json = param)
             shareLink = res.json()['sharelink']
@@ -319,7 +319,7 @@ async def hello5(event):
             url  = 'https://diskuploader.mypowerdisk.com/v1/tp/cp'
             param = {
                 'token': mdisk_api,
-                'link':link
+                'link':link.strip()
                 }
             res = requests.post(url, json = param)
             shareLink = res.json()['sharelink']
@@ -373,7 +373,7 @@ async def hello6(event):
             url  = 'https://diskuploader.mypowerdisk.com/v1/tp/cp'
             param = {
                 'token': mdisk_api,
-                'link':link
+                'link':link.strip()
                 }
             res = requests.post(url, json = param)
             shareLink = res.json()['sharelink']
