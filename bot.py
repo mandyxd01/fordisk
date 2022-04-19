@@ -217,8 +217,16 @@ async def hello3(event):
                 'token': mdisk_api,
                 'link':link.strip()
                 }
-            res = requests.post(url, json = param)
-            shareLink = res.json()['sharelink']
+            try:
+                res = requests.post(url, json = param)
+            except:
+                print("error in res")
+                return
+            try:
+                shareLink = res.json()['sharelink']
+            except:
+                print("error in share")
+                shareLink = "Not Found"
             # print("changed link : " , shareLink)
             caption = re.sub(link , shareLink , caption)
             # print(caption)
@@ -273,8 +281,16 @@ async def hello4(event):
                 'token': mdisk_api,
                 'link':link.strip()
                 }
-            res = requests.post(url, json = param)
-            shareLink = res.json()['sharelink']
+            try:
+                res = requests.post(url, json = param)
+            except:
+                print("error in res")
+                return
+            try:
+                shareLink = res.json()['sharelink']
+            except:
+                print("error in share")
+                shareLink = "Not Found"
             # print("changed link : " , shareLink)
             caption = re.sub(link , shareLink , caption)
             # print(caption)
@@ -329,8 +345,16 @@ async def hello5(event):
                 'token': mdisk_api,
                 'link':link.strip()
                 }
-            res = requests.post(url, json = param)
-            shareLink = res.json()['sharelink']
+            try:
+                res = requests.post(url, json = param)
+            except:
+                print("error in res")
+                return
+            try:
+                shareLink = res.json()['sharelink']
+            except:
+                print("error in share")
+                shareLink = "Not Found"
             # print("changed link : " , shareLink)
             caption = re.sub(link , shareLink , caption)
             # print(caption)
@@ -383,8 +407,16 @@ async def hello6(event):
                 'token': mdisk_api,
                 'link':link.strip()
                 }
-            res = requests.post(url, json = param)
-            shareLink = res.json()['sharelink']
+            try:
+                res = requests.post(url, json = param)
+            except:
+                print("error in res")
+                return
+            try:
+                shareLink = res.json()['sharelink']
+            except:
+                print("error in share")
+                shareLink = "Not Found"
             # print("changed link : " , shareLink)
             caption = re.sub(link , shareLink , caption)
             # print(caption)
