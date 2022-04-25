@@ -53,6 +53,7 @@ onsend_to = -1001295828233
 
 @client.on(events.NewMessage(chats=indchats))
 async def hello1(event):
+
     # chat = await event.get_chat()
     caption = event.message.message
     urls_to_change = re.findall('https?://mdisk.me/convertor/.*' , caption)
@@ -65,6 +66,7 @@ async def hello1(event):
         #  this is for blacklist word 
         
         caption = re.sub("hehe" , "" , caption)
+        
         caption = re.sub("hoho" , "" , caption)
         caption = re.sub("𝗙𝗼𝗹𝗹𝗼𝘄 𝗼𝘂𝗿 𝗶𝗻𝘀𝘁𝗮 𝗽𝗮𝗴𝗲👇" , "" , caption)
         caption = re.sub("https://www.instagram.com/haq.sebakchodi/" , "" , caption)
@@ -121,67 +123,72 @@ async def hello1(event):
 
 @client.on(events.NewMessage(chats=indchats))
 async def hello2(event):
-    # chat = await event.get_chat()
-    caption = event.message.message
-    urls_to_change = re.findall('https?://mdisk.me/convertor/.*' , caption)
-    if(urls_to_change):
-        try:
-            media = await client.download_media(event.message)
-        except:
-            media = False
-            print("no media")
-        #  this is for blacklist word 
-        
-        caption = re.sub("hehe" , "" , caption)
-        caption = re.sub("hoho" , "" , caption)
-        caption = re.sub("𝗙𝗼𝗹𝗹𝗼𝘄 𝗼𝘂𝗿 𝗶𝗻𝘀𝘁𝗮 𝗽𝗮𝗴𝗲👇" , "" , caption)
-        caption = re.sub("https://www.instagram.com/haq.sebakchodi/" , "" , caption)
-
-
-
-        caption = re.sub("@.*" , "" , caption)
-        caption = re.sub("https://t.me/.*" , "" , caption)
-        caption = re.sub("t.me/.*" , "" , caption)
-        caption = re.sub("T.me/.*" , "" , caption)
-        for i in black:
-            caption = re.sub(i, "" , caption)
-
-        regrex_pattern = re.compile(pattern = "["
-                    u"\U0001F600-\U0001F64F"  # emoticons
-                    u"\U0001F300-\U0001F5FF"  # symbols & pictographs
-                    u"\U0001F680-\U0001F6FF"  # transport & map symbols
-                    u"\U0001F1E0-\U0001F1FF"  # flags (iOS)
-                            "]+", flags = re.UNICODE)
-
-        # url to change 
-        for i in urls_to_change:
-            link = regrex_pattern.sub(r'' , i)
-            #print(link)
-            url  = 'https://diskuploader.mypowerdisk.com/v1/tp/cp'
-            param = {
-                'token': mdisk_api,
-                'link':link.strip()
-                }
+    c = 0
+    while(c<10):
+        # chat = await event.get_chat()
+        caption = event.message.message
+        urls_to_change = re.findall('https?://mdisk.me/convertor/.*' , caption)
+        if(urls_to_change):
             try:
-                res = requests.post(url, json = param)
+                media = await client.download_media(event.message)
             except:
-                print("error in res")
-                return
-            try:
-                shareLink = res.json()['sharelink']
-            except:
-                print("error in share")
-                shareLink = ""
-            # print("changed link : " , shareLink)
-            caption = re.sub(link , shareLink , caption)
-            # print(caption)
-            sleep(0.2)
-        caption = caption + "\n"
-        if media:
-            await client.send_file(indsend_to2 ,file=media , caption=caption)
-            os.remove(media)
-        else:
-            await client.send_message(indsend_to2 , caption)
+                media = False
+                print("no media")
+            #  this is for blacklist word 
+
+            caption = re.sub("hehe" , "" , caption)
+            caption = re.sub("hoho" , "" , caption)
+            caption = re.sub("𝗙𝗼𝗹𝗹𝗼𝘄 𝗼𝘂𝗿 𝗶𝗻𝘀𝘁𝗮 𝗽𝗮𝗴𝗲👇" , "" , caption)
+            caption = re.sub("https://www.instagram.com/haq.sebakchodi/" , "" , caption)
+
+            caption = re.sub("@.*" , "" , caption)
+            caption = re.sub("https://t.me/.*" , "" , caption)
+            caption = re.sub("t.me/.*" , "" , caption)
+            caption = re.sub("T.me/.*" , "" , caption)
+            for i in black:
+                caption = re.sub(i, "" , caption)
+
+            regrex_pattern = re.compile(pattern = "["
+                        u"\U0001F600-\U0001F64F"  # emoticons
+                        u"\U0001F300-\U0001F5FF"  # symbols & pictographs
+                        u"\U0001F680-\U0001F6FF"  # transport & map symbols
+                        u"\U0001F1E0-\U0001F1FF"  # flags (iOS)
+                                "]+", flags = re.UNICODE)
+
+            # url to change 
+            for i in urls_to_change:
+                link = regrex_pattern.sub(r'' , i)
+                #print(link)
+                url  = 'https://diskuploader.mypowerdisk.com/v1/tp/cp'
+                param = {
+                    'token': mdisk_api,
+                    'link':link.strip()
+                    }
+                try:
+                    res = requests.post(url, json = param)
+                except:
+                    print("error in res")
+                    return
+                try:
+                    shareLink = res.json()['sharelink']
+                except:
+                    print("error in share")
+                    shareLink = ""
+                # print("changed link : " , shareLink)
+                caption = re.sub(link , shareLink , caption)
+                # print(caption)
+                sleep(0.2)
+            caption = caption + "\n"
+            if media:
+                await client.send_file(indsend_to2 ,file=media , caption=caption)
+                os.remove(media)
+            else:
+                await client.send_message(indsend_to2 , caption)
+        c+=1
+    time.sleep(1200)
+    time.sleep(1200)
+    time.sleep(1200)
+    time.sleep(1200)
 
 
   ##################### WEBSERIES #############  
