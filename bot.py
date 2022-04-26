@@ -185,10 +185,10 @@ async def hello2(event):
             else:
                 await client.send_message(indsend_to2 , caption)
         c+=1
-    time.sleep(900)
-    time.sleep(900)
-    time.sleep(900)
-    time.sleep(900)
+    sleep(900)
+    sleep(900)
+    sleep(900)
+    sleep(900)
     print("Im Sleeping")
 
 
