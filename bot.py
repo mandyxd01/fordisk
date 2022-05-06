@@ -19,7 +19,7 @@ mdisk_api = 'jNgyWyCG2KK4tvh5RVFX'
 #footer
 footer = '''\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
 ⭐️JOIN OUR BACKUP CHANNEL
-➡️https://t.me/+4pWKks9myX03Y2Ex'''
+➡️https://t.me/+_NZFqNwyfHpmYTcx'''
 
 black = ["❤Earning app🤑🤑","http://share.royalgame.in?invite_code784297","💟𝗕𝗘𝗦𝗧 𝗘𝗔𝗥𝗡𝗜𝗡𝗚 𝗔𝗣𝗣","https://www.boow.in/agent-74-1782101","⭐JOIN OUR BACKUP CHANNEL","➡","Must watch guys🔥🔥🔥","Join backup channel 👇","Cricket fans ke liye bahut sunhara mauka khele free contest and win kre daily 1lac","Is IPL season daily 1000k","prize 🏆","https://assets-1.mdisk.me/assets/apk/Winner11-1.02.apk","❤Join Channel❤","➡️","⭐️JOIN OUR BACKUP CHANNEL","Aagya INDIA'S 1st FREE WINNING Fantasy APP","Visit :- www.winner11.net","Install now 👇","https://mdisk.me/convertor/203x360/jn2SYC","@ EZINETWORK","Must watch 🤩🤩🔥🔥🔥🔥","Join Our Telegram Backup Channel In Case This Channel Delete Please Join It Please👇👇","Must watch Guys 🔥🔥🔥🔥🔥","Enjoy it ❤❤❤","♨️ 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳 𝙺𝙰𝚁𝙽𝙴 𝙽𝙰𝙷𝙸 𝙰𝙰𝚁𝙰 𝚃𝙾𝙷 𝙿𝙸𝙽𝙽𝙴𝙳 𝙼𝙴𝚂𝚂𝙰𝙶𝙴 𝙲𝙷𝙴𝙲𝙺 𝙺𝙰𝚁𝙾","👉 🅱🅰🅲🅺🆄🅿  🅲🅷🅰🅽🅽🅴🅻","=" ,"●╾⁃⁃╼╾⁃⁃╼╾⁃⁃╼╾⁃⁃╼╾⁃⁃╼╾⁃⁃╼╾⁃⁃╼●" ,"🔥Backup file🔥" ,"🔥Join channel 🔥" ,"JOIN CHANNEL 👇" ,"Join adult network🍌💦" ,"SHARE OUR CHANNEL👇" ,"𝗧𝗲𝗹𝗲𝗴𝗿𝗮𝗺 𝗰𝗵𝗮𝗻𝗻𝗲𝗹" ,"𝐉𝐎𝐈𝐍 𝐔𝐒 ➪" ,"🙆‍♀ Join Our Backup:- ","Join now best channel" ,"♨️ SEARCH & JOIN NOW👇","☆☆☆••••••••••••••••☆☆☆","➥"]
 
