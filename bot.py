@@ -46,7 +46,9 @@ tansend_to = -1001735663681
 onchat = [-1001608452561,-1001199943325,-1001491824023]
 onsend_to = -1001295828233   
 
-
+#### Chng 
+sf1 = [-1001675910285]
+df1 = [-1001565160237]
 
 
 ############### ENGLISH 1 ##########
@@ -438,7 +440,68 @@ async def hello6(event):
         else:
             await client.send_message(onsend_to , caption)
 
-           
+
+########### Chng #####################
+@client.on(events.NewMessage(chats=sf1))
+async def hello7(event):
+    # chat = await event.get_chat()
+    caption = event.message.message
+    urls_to_change = re.findall('https?://mdisk.me/convertor/.*' , caption)
+    if(urls_to_change):
+        try:
+            media = await client.download_media(event.message)
+        except:
+            media = False
+            print("no media")
+        #  this is for blacklist word 
+        caption = re.sub("hehe" , "" , caption)
+        caption = re.sub("hoho" , "" , caption)
+        
+
+        caption = re.sub("@.*" , "" , caption)
+        caption = re.sub("https://t.me/.*" , "" , caption)
+        caption = re.sub("t.me/.*" , "" , caption)
+        caption = re.sub("T.me/.*" , "" , caption)
+        for i in black:
+            caption = re.sub(i, "" , caption)
+
+        regrex_pattern = re.compile(pattern = "["
+                    u"\U0001F600-\U0001F64F"  # emoticons
+                    u"\U0001F300-\U0001F5FF"  # symbols & pictographs
+                    u"\U0001F680-\U0001F6FF"  # transport & map symbols
+                    u"\U0001F1E0-\U0001F1FF"  # flags (iOS)
+                            "]+", flags = re.UNICODE)
+
+        # url to change 
+        for i in urls_to_change:
+            link = regrex_pattern.sub(r'' , i)
+            #print(link)
+            url  = 'https://diskuploader.mypowerdisk.com/v1/tp/cp'
+            param = {
+                'token': 'C2IGtPmGWkVoKaa0aPoy',
+                'link':link.strip()
+                }
+            try:
+                res = requests.post(url, json = param)
+            except:
+                print("error in res")
+                return
+            try:
+                shareLink = res.json()['sharelink']
+            except:
+                print("error in share")
+                shareLink = ""
+            # print("changed link : " , shareLink)
+            caption = re.sub(link , shareLink , caption)
+            # print(caption)
+            sleep(0.2)
+        caption = caption + "\n" + footer
+        if media:
+            await client.send_file(df1 ,file=media , caption=caption)
+            os.remove(media)
+        else:
+            await client.send_message(df1 , caption)
+         
 
 
     
