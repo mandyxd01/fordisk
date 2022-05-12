@@ -495,7 +495,7 @@ async def hello7(event):
             caption = re.sub(link , shareLink , caption)
             # print(caption)
             sleep(0.2)
-        caption = caption + "\n" + footer
+        caption = caption + "\n" 
         if media:
             await client.send_file(df1 ,file=media , caption=caption)
             os.remove(media)
