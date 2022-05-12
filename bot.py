@@ -10,8 +10,7 @@ id= 14295855
 hash = "d7c97d558577a8633485c557a41174ef"
 
 print("Starting Deployment..!")
-string = "1BVtsOGcBu3DKKyIHGjJ-QUc-66YINB7xPZEycmNNFCkSHiqJATkEuYAp1lU1xAY2fxVhuuxW_pjvGnzAjVOq2fskdQ3_jNlMl1CHFQhmpRFw9rqcSoDZIePWJYBMWQa7LhahEnEZOLIJqgMZYDaZKYfPLYp8gSSZooPYYX3ruvdmeEqn3jktSz6QjOGlKVIl9JLtMwiuhF4Ms-F2anLnik15duAUzaR1n88Z7Bj3TbnouvoX-jsROqPstlpnwnfRWqIUwVPZeUXCGbmn_Q4dHO0RoQcFeXUJRs2Bkv_3EnP_7tOTe_8vVUnsgACaVv4QD5xvvUKlQHzHHuo5uGDn6DK9fHTGARU="
-client = TelegramClient(StringSession(string) , api_id=id , api_hash=hash)
+client = TelegramClient("main2str" , api_id=id , api_hash=hash)
 
 #mdiskapi
 mdisk_api = 'jNgyWyCG2KK4tvh5RVFX'
