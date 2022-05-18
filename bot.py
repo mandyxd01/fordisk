@@ -22,11 +22,15 @@ footer = '''\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
 
 black = ["https://www.instagram.com/haq.sebakchodi/","𝗙𝗼𝗹𝗹𝗼𝘄 𝗼𝘂𝗿 𝗶𝗻𝘀𝘁𝗮 𝗽𝗮𝗴𝗲👇","❤Earning app🤑🤑","http://share.royalgame.in?invite_code784297","💟𝗕𝗘𝗦𝗧 𝗘𝗔𝗥𝗡𝗜𝗡𝗚 𝗔𝗣𝗣","https://www.boow.in/agent-74-1782101","⭐JOIN OUR BACKUP CHANNEL","➡","Must watch guys🔥🔥🔥","Join backup channel 👇","Cricket fans ke liye bahut sunhara mauka khele free contest and win kre daily 1lac","Is IPL season daily 1000k","prize 🏆","https://assets-1.mdisk.me/assets/apk/Winner11-1.02.apk","❤Join Channel❤","➡️","⭐️JOIN OUR BACKUP CHANNEL","Aagya INDIA'S 1st FREE WINNING Fantasy APP","Visit :- www.winner11.net","Install now 👇","https://mdisk.me/convertor/203x360/jn2SYC","@ EZINETWORK","Must watch 🤩🤩🔥🔥🔥🔥","Join Our Telegram Backup Channel In Case This Channel Delete Please Join It Please👇👇","Must watch Guys 🔥🔥🔥🔥🔥","Enjoy it ❤❤❤","♨️ 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳 𝙺𝙰𝚁𝙽𝙴 𝙽𝙰𝙷𝙸 𝙰𝙰𝚁𝙰 𝚃𝙾𝙷 𝙿𝙸𝙽𝙽𝙴𝙳 𝙼𝙴𝚂𝚂𝙰𝙶𝙴 𝙲𝙷𝙴𝙲𝙺 𝙺𝙰𝚁𝙾","👉 🅱🅰🅲🅺🆄🅿  🅲🅷🅰🅽🅽🅴🅻","=" ,"●╾⁃⁃╼╾⁃⁃╼╾⁃⁃╼╾⁃⁃╼╾⁃⁃╼╾⁃⁃╼╾⁃⁃╼●" ,"🔥Backup file🔥" ,"🔥Join channel 🔥" ,"JOIN CHANNEL 👇" ,"Join adult network🍌💦" ,"SHARE OUR CHANNEL👇" ,"𝗧𝗲𝗹𝗲𝗴𝗿𝗮𝗺 𝗰𝗵𝗮𝗻𝗻𝗲𝗹" ,"𝐉𝐎𝐈𝐍 𝐔𝐒 ➪" ,"🙆‍♀ Join Our Backup:- ","Join now best channel" ,"♨️ SEARCH & JOIN NOW👇","☆☆☆••••••••••••••••☆☆☆","➥"]
 
+##### ios new
+
+iosNewS = [-1001697964934,-1001719935473,-1001245242833]
+iosNewD = -1001146630538
 
 #indian variables
 indchats = [-1001679399038,-1001599913233,-1001794604239,-1001316413287,-1001665192861,-1001626636022,-1001168213397,-1001708628164,-1001562499878,-1001493682832]
 indsend_to1 = -1001607066545
-indsend_to2 = -1001758677135
+
 
 #webseries var 
 webchat = [-1001469414697,-1001663135966,-1001755571010,-1001634910114,-1001038963647,-1001350448575,-1001585256875,-1001398939317]
@@ -122,7 +126,7 @@ async def hello1(event):
             
             ############### ENGLISH IOS ##########
 
-@client.on(events.NewMessage(chats=indchats))
+@client.on(events.NewMessage(chats=iosNewS))
 async def hello2(event):
     # chat = await event.get_chat()
     caption = event.message.message
@@ -180,10 +184,10 @@ async def hello2(event):
             sleep(0.2)
         caption = caption + "\n"
         if media:
-            await client.send_file(indsend_to2, file=media, caption=caption)
+            await client.send_file(iosNewD, file=media, caption=caption)
             os.remove(media)
         else:
-            await client.send_message(indsend_to2, caption)
+            await client.send_message(iosNewD, caption)
 
 
 
