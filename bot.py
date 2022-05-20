@@ -50,7 +50,7 @@ onchat = [-1001608452561,-1001199943325,-1001491824023]
 onsend_to = -1001295828233   
 
 
-
+sfoot = "https://t.me/Watch_Streaam_Links/9"
 
 ############### ENGLISH 1 ##########
 
@@ -144,7 +144,6 @@ async def hello2(event):
         caption = re.sub("hoho" , "" , caption)
         caption = re.sub("𝗙𝗼𝗹𝗹𝗼𝘄 𝗼𝘂𝗿 𝗶𝗻𝘀𝘁𝗮 𝗽𝗮𝗴𝗲👇" , "" , caption)
         caption = re.sub("https://www.instagram.com/haq.sebakchodi/" , "" , caption)
-        caption = re.sub("https://t.me/open_streaam/14" , "https://t.me/Watch_Streaam_Links/9" , caption)
    
         caption = re.sub("@.*" , "" , caption)
         caption = re.sub("https://t.me/.*" , "" , caption)
@@ -186,7 +185,7 @@ async def hello2(event):
             caption = re.sub(re.escape(i) , shareLink , caption)
             # print(caption)
             # sleep(0.2)
-        caption = caption + "\n"
+        caption = caption + "\n"+sfoot
         if media:
             await client.send_file(iosNewD, file=media, caption=caption)
             os.remove(media)
@@ -216,7 +215,6 @@ async def hello3(event):
         caption = re.sub("hoho" , "" , caption)
         caption = re.sub("𝗙𝗼𝗹𝗹𝗼𝘄 𝗼𝘂𝗿 𝗶𝗻𝘀𝘁𝗮 𝗽𝗮𝗴𝗲👇" , "" , caption)
         caption = re.sub("https://www.instagram.com/haq.sebakchodi/" , "" , caption)
-        caption = re.sub("https://t.me/open_streaam/14" , "https://t.me/Watch_Streaam_Links/9" , caption)
    
         caption = re.sub("@.*" , "" , caption)
         caption = re.sub("https://t.me/.*" , "" , caption)
@@ -258,12 +256,12 @@ async def hello3(event):
             caption = re.sub(re.escape(i) , shareLink , caption)
             # print(caption)
             # sleep(0.2)
-        caption = caption + "\n"
+        caption = caption + "\n"+sfoot
         if media:
-            await client.send_file(dessend_to ,file=media , caption=caption)
+            await client.send_file(websend_to ,file=media , caption=caption)
             os.remove(media)
         else:
-            await client.send_message(dessend_to , caption)
+            await client.send_message(websend_to , caption)
             
             
   
@@ -328,7 +326,72 @@ async def hello5(event):
             os.remove(media)
         else:
             await client.send_message(tansend_to , caption)
-            
+           
+        
+        
+        
+ 
+############ Desi ###############
+
+@client.on(events.NewMessage(chats=deschat))
+async def hello55(event):
+    # chat = await event.get_chat()
+    caption = event.message.message
+    urls_to_change = re.findall('https?://mdisk.me/convertor/.*' , caption)
+    if(urls_to_change):
+        try:
+            media = await client.download_media(event.message)
+        except:
+            media = False
+            print("no media")
+        #  this is for blacklist word 
+        caption = re.sub("hehe" , "" , caption)
+        caption = re.sub("hoho" , "" , caption)
+        
+
+        caption = re.sub("@.*" , "@X3Links" , caption)
+        caption = re.sub("https://t.me/.*" , "@X3Links" , caption)
+        caption = re.sub("t.me/.*" , "@X3Links" , caption)
+        caption = re.sub("T.me/.*" , "@X3Links" , caption)
+        for i in black:
+            caption = re.sub(i, "" , caption)
+
+        regrex_pattern = re.compile(pattern = "["
+                    u"\U0001F600-\U0001F64F"  # emoticons
+                    u"\U0001F300-\U0001F5FF"  # symbols & pictographs
+                    u"\U0001F680-\U0001F6FF"  # transport & map symbols
+                    u"\U0001F1E0-\U0001F1FF"  # flags (iOS)
+                            "]+", flags = re.UNICODE)
+
+        # url to change 
+        for i in urls_to_change:
+            link = regrex_pattern.sub(r'' , i)
+            #print(link)
+            url  = 'https://diskuploader.mypowerdisk.com/v1/tp/cp'
+            param = {
+                'token': mdisk_api,
+                'link':link.strip()
+                }
+            try:
+                res = requests.post(url, json = param)
+            except:
+                print("error in res")
+                return
+            try:
+                shareLink = res.json()['sharelink']
+            except:
+                print("error in share")
+                shareLink = ""
+            # print("changed link : " , shareLink)
+            caption = re.sub(link , shareLink , caption)
+            # print(caption)
+            sleep(0.2)
+        caption = caption + "\n" + footer
+        if media:
+            await client.send_file(deschat_to ,file=media , caption=caption)
+            os.remove(media)
+        else:
+            await client.send_message(deschat_to , caption)
         
 ########### ONLYFANS #####################
 @client.on(events.NewMessage(chats=onchat))
