@@ -24,7 +24,7 @@ black = ["Adult Whatsapp Group Join Karne Ke Liye Click Kare 👇👇👇👇","
 
 ##### ios new
 
-iosNewS = [-1001320268729,-1001269643652,-1001592280578,-1001725626602]
+iosNewS = [-1001320268729,-1001269643652,-1001592280578,-1001725626602,-1001736624413]
 iosNewD = -1001146630538
 
 #eng variables
@@ -33,7 +33,7 @@ indsend_to1 = -1001607066545
 
 
 #webseries var 
-webchat = [-1001593607523,-1001028498885,-1001708829219,-1001421452039,-1001725626602]
+webchat = [-1001615368632,-1001593607523,-1001028498885,-1001708829219,-1001421452039,-1001725626602]
 websend_to = -1001649482502
 
 #desi vars
@@ -185,7 +185,7 @@ async def hello2(event):
             caption = re.sub(re.escape(i) , shareLink , caption)
             # print(caption)
             # sleep(0.2)
-        caption = caption + "\n"+sfoot
+        caption = caption +sfoot
         if media:
             await client.send_file(iosNewD, file=media, caption=caption)
             os.remove(media)
@@ -256,7 +256,7 @@ async def hello3(event):
             caption = re.sub(re.escape(i) , shareLink , caption)
             # print(caption)
             # sleep(0.2)
-        caption = caption + "\n"+sfoot
+        caption = caption +sfoot
         if media:
             await client.send_file(websend_to ,file=media , caption=caption)
             os.remove(media)
