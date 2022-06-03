@@ -24,7 +24,7 @@ black = ["Adult Whatsapp Group Join Karne Ke Liye Click Kare 👇👇👇👇","
 
 ##### ios new
 
-iosNewS = [-1001320268729,-1001269643652,-1001592280578,-1001725626602,-1001736624413]
+# iosNewS = [-1001320268729,-1001269643652,-1001592280578,-1001725626602,-1001736624413]
 iosNewD = -1001146630538
 
 #eng variables
@@ -128,13 +128,11 @@ async def hello1(event):
             
             ###############  IOS ##########
 
-@client.on(events.NewMessage(chats=iosNewS))
+@client.on(events.NewMessage(chats=deschat))
 async def hello2(event):
     # chat = await event.get_chat()
     caption = event.message.message
-    # link syntax = https://streaam.net/S/$UydxddrFxb 
-    urls_to_change = re.findall('https?://streaam.net/S/.*' , caption)
-    # print(urls_to_change)
+    urls_to_change = re.findall('https?://mdisk.me/convertor/.*' , caption)
     if(urls_to_change):
         try:
             media = await client.download_media(event.message)
@@ -142,19 +140,23 @@ async def hello2(event):
             media = False
             print("no media")
         #  this is for blacklist word 
-
+        
         caption = re.sub("hehe" , "" , caption)
+        
         caption = re.sub("hoho" , "" , caption)
         caption = re.sub("𝗙𝗼𝗹𝗹𝗼𝘄 𝗼𝘂𝗿 𝗶𝗻𝘀𝘁𝗮 𝗽𝗮𝗴𝗲👇" , "" , caption)
         caption = re.sub("https://www.instagram.com/haq.sebakchodi/" , "" , caption)
-   
-        caption = re.sub("@.*" , "" , caption)
-        caption = re.sub("https://t.me/.*" , "" , caption)
-        caption = re.sub("t.me/.*" , "" , caption)
-        caption = re.sub("T.me/.*" , "" , caption)
+        caption = re.sub("https://t.me/open_streaam/14" , "" , caption)
+
+
+
+        caption = re.sub("@.*" , "@X3Links" , caption)
+        caption = re.sub("https://t.me/.*" , "@X3Links" , caption)
+        caption = re.sub("t.me/.*" , "@X3Links" , caption)
+        caption = re.sub("T.me/.*" , "@X3Links" , caption)
         for i in black:
             caption = re.sub(i, "" , caption)
-            
+
         regrex_pattern = re.compile(pattern = "["
                     u"\U0001F600-\U0001F64F"  # emoticons
                     u"\U0001F300-\U0001F5FF"  # symbols & pictographs
@@ -165,32 +167,29 @@ async def hello2(event):
         # url to change 
         for i in urls_to_change:
             link = regrex_pattern.sub(r'' , i)
-            linkid = link.split("/")[-1]
-            # print(linkid)
-            key = sapi
-            url  = f'https://api.streaam.net/save?linkid={linkid}&key={key}'
-            # print(url)
-            # param = {
-            #     'token': mdisk_api,
-            #     'link':link.strip()
-            #     }
+            #print(link)
+            url  = 'https://diskuploader.mypowerdisk.com/v1/tp/cp'
+            param = {
+                'token': mdisk_api,
+                'link':link.strip()
+                }
             try:
-                res = requests.get(url)
+                res = requests.post(url, json = param)
             except:
                 print("error in res")
                 return
             try:
-                shareLink = res.json()['link']
+                shareLink = res.json()['sharelink']
             except:
                 print("error in share")
                 shareLink = ""
-            print("changed link : " , shareLink)
-            caption = re.sub(re.escape(i) , shareLink , caption)
+            # print("changed link : " , shareLink)
+            caption = re.sub(link , shareLink , caption)
             # print(caption)
-            # sleep(0.2)
-        caption = caption +sfoot
+            sleep(0.2)
+        caption = caption + "\n"
         if media:
-            await client.send_file(iosNewD, file=media, caption=caption)
+            await client.send_file(iosNewD,file=media , caption=caption)
             os.remove(media)
         else:
             await client.send_message(iosNewD, caption)
