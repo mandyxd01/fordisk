@@ -24,7 +24,7 @@ black = ["Adult Whatsapp Group Join Karne Ke Liye Click Kare 👇👇👇👇","
 
 ##### ios new
 
-iosNewS = [-1001320268729,-1001269643652,-1001592280578,-1001725626602,-1001736624413]
+iosNewS = [-1001704846995,-1001664655637,-1001320268729,-1001269643652,-1001592280578,-1001725626602,-1001736624413]
 iosNewD = -1001146630538
 
 #eng variables
@@ -33,7 +33,7 @@ indsend_to1 = -1001607066545
 
 
 #webseries var 
-webchat = [-1001615368632,-1001593607523,-1001028498885,-1001708829219,-1001421452039,-1001725626602,-1001115164915,-1001663893158]
+webchat = [-1001633880399,-1001615368632,-1001593607523,-1001028498885,-1001708829219,-1001421452039,-1001725626602,-1001115164915,-1001663893158]
 websend_to = -1001621269851
 
 #desi vars
@@ -391,10 +391,10 @@ async def hello55(event):
             sleep(0.2)
         caption = caption + "\n" + footer
         if media:
-            await client.send_file(deschat_to ,file=media , caption=caption)
+            await client.send_file(dessend_to ,file=media , caption=caption)
             os.remove(media)
         else:
-            await client.send_message(deschat_to , caption)
+            await client.send_message(dessend_to , caption)
         
 ########### ONLYFANS #####################
 @client.on(events.NewMessage(chats=onchat))
